@@ -1,0 +1,42 @@
+{
+  "name": "log-analizoru",
+  "version": "4.2.0",
+  "description": "Profesyonel İnvertör Log Analizörü — Masaüstü Uygulaması",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.1",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.2",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.deniz.loganalyzer",
+    "productName": "Log Analizörü",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "log_analyzer.html",
+      "src/**",
+      "assets/**",
+      "node_modules/**"
+    ]
+  }
+}

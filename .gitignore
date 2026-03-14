@@ -1,0 +1,8 @@
+node_modules/
+saved_logs/
+saved_notes/
+test_gemini.json
+dist/
+*.log
+.DS_Store
+.env
